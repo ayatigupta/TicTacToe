@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe AI - Scoreboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scoreboard-page">
+        <header class="scoreboard-header">
+            <a href="index.html" class="back-button">← Back</a>
+            <h1>Scoreboard</h1>
+            <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                <span id="themeIcon">☀️</span>
+            </button>
+        </header>
+
+        <main class="scoreboard-container">
+            <!-- Main Stats -->
+            <div class="stats-grid">
+                <div class="stat-card player-stat">
+                    <div class="stat-icon">👤</div>
+                    <div class="stat-label">Your Wins</div>
+                    <div class="stat-value" id="playerWins">0</div>
+                </div>
+
+                <div class="stat-card draw-stat">
+                    <div class="stat-icon">🤝</div>
+                    <div class="stat-label">Draws</div>
+                    <div class="stat-value" id="draws">0</div>
+                </div>
+
+                <div class="stat-card ai-stat">
+                    <div class="stat-icon">🤖</div>
+                    <div class="stat-label">AI Wins</div>
+                    <div class="stat-value" id="aiWins">0</div>
+                </div>
+            </div>
+
+            <!-- Summary Stats -->
+            <div class="summary-stats">
+                <div class="summary-card">
+                    <div class="summary-label">Total Games</div>
+                    <div class="summary-value" id="totalGames">0</div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-label">Win Rate</div>
+                    <div class="summary-value" id="winRate">0%</div>
+                </div>
+            </div>
+
+            <!-- Performance Analysis -->
+            <div class="performance-analysis" id="performanceAnalysis" style="display: none;">
+                <h2>Performance Analysis</h2>
+                <div class="chart-container">
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <label>Your Wins</label>
+                            <div class="bar-track">
+                                <div class="bar-fill player-bar" id="playerBar">
+                                    <span id="playerPercent">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bar-item">
+                            <label>Draws</label>
+                            <div class="bar-track">
+                                <div class="bar-fill draw-bar" id="drawBar">
+                                    <span id="drawPercent">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bar-item">
+                            <label>AI Wins</label>
+                            <div class="bar-track">
+                                <div class="bar-fill ai-bar" id="aiBar">
+                                    <span id="aiPercent">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">🎮</div>
+                <p>No games played yet!</p>
+                <a href="game.html" class="play-btn">Start Your First Game</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="scoreboard-actions" id="scoreboardActions" style="display: none;">
+                <a href="game.html" class="action-btn play-btn">Play Again</a>
+                <button class="action-btn reset-btn" id="resetBtn">Reset Scores</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

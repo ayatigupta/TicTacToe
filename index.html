@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe AI - Landing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="landing-page">
+        <div class="floating-bg"></div>
+
+        <header class="landing-header">
+            <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                <span id="themeIcon">☀️</span>
+            </button>
+            <a href="scoreboard.html" class="scoreboard-link">
+                <span>📊</span> Scoreboard
+            </a>
+        </header>
+
+        <main class="landing-container">
+            <div class="board-section">
+                <!-- CSS 3D Board Animation -->
+                <div class="animated-board">
+                    <div class="board-3d">
+                        <div class="cell x">X</div>
+                        <div class="cell o">O</div>
+                        <div class="cell x">X</div>
+                        <div class="cell o">O</div>
+                        <div class="cell x">X</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-section">
+                <h1 class="landing-title">
+                    Tic Tac Toe
+                    <br>
+                    <span class="gradient-text">AI</span>
+                </h1>
+
+                <p class="landing-subtitle">Challenge the AI and test your strategic skills</p>
+
+                <!-- Difficulty Selector -->
+                <div class="difficulty-selector">
+                    <label>Choose Difficulty:</label>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn active" data-difficulty="easy">🎲 Easy</button>
+                        <button class="difficulty-btn" data-difficulty="medium">🧠 Medium</button>
+                        <button class="difficulty-btn" data-difficulty="hard">🤖 Hard</button>
+                    </div>
+                </div>
+
+                <!-- Difficulty Description -->
+                <div class="difficulty-description" id="difficultyDesc">
+                    🎮 Random moves - Best for learning
+                </div>
+
+                <!-- Start Button -->
+                <a href="game.html" class="start-button" id="startBtn">
+                    <span>Start Game</span>
+                    <span class="button-icon">→</span>
+                </a>
+            </div>
+        </main>
+
+        <!-- Floating Elements -->
+        <div class="float-element element-1"></div>
+        <div class="float-element element-2"></div>
+        <div class="float-element element-3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
